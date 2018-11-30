@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     private ProgressBar mProgressBar;
     private static final String TAG = "MainActivity";
     private NewsItemViewModel newsItemViewModel;
-    private NewsRecyclerViewAdapter mAdapter;
+    private NewsAdapter mAdapter;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         mProgressBar = findViewById(R.id.progress);
         RecyclerView mRecyclerView = findViewById(R.id.news_recyclerview);
         newsItemViewModel = ViewModelProviders.of(this).get(NewsItemViewModel.class);
-        mAdapter = new NewsRecyclerViewAdapter(this, newsItemViewModel);
+        mAdapter = new NewsAdapter(this, newsItemViewModel);
         mRecyclerView.setAdapter(mAdapter);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 

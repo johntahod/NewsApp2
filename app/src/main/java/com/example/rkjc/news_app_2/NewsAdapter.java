@@ -12,19 +12,19 @@ import android.widget.TextView;
 import java.util.List;
 
 
-public class NewsRecyclerViewAdapter  extends RecyclerView.Adapter<NewsRecyclerViewAdapter.NewsViewHolder> {
+public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder> {
 
     Context mContext;
     List<NewsItem> mRepos;
     private NewsItemViewModel viewModel;
 
-    public NewsRecyclerViewAdapter(Context context, NewsItemViewModel viewModel){
+    public NewsAdapter(Context context, NewsItemViewModel viewModel){
         this.mContext = context;
         this.viewModel = viewModel;
     }
 
     @Override
-    public NewsRecyclerViewAdapter.NewsViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public NewsAdapter.NewsViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         Context context = parent.getContext();
         LayoutInflater inflater = LayoutInflater.from(context);
         boolean shouldAttachToParentImmediately = false;
@@ -35,7 +35,7 @@ public class NewsRecyclerViewAdapter  extends RecyclerView.Adapter<NewsRecyclerV
     }
 
     @Override
-    public void onBindViewHolder(NewsRecyclerViewAdapter.NewsViewHolder holder, int position) {
+    public void onBindViewHolder(NewsAdapter.NewsViewHolder holder, int position) {
         holder.bind(position);
     }
 
