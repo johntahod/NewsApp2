@@ -1,1 +1,2 @@
-# News_Application
+
+homework part 2. adding DB
